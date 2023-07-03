@@ -1,55 +1,77 @@
-//  Changing Text Content:
-function functionOne() {
-    // Access the element by its ID
-    const paragraph = document.getElementById('myParagraph');
+//  Mudando o texto de um parágrafo
+function mudarTextoParagrafo() {
+    // Acessa o elemento a partir do seu ID
+    const paragrafo = document.getElementById('identificadorDoParagrafo');
 
-    // Change the text content
-    paragraph.textContent = 'Hello, OpenAI!';
+    // Muda o texto do elemento
+    paragrafo.textContent = 'Olá, alunos!';
 }
 
-// Modifying HTML Attributes:
-function functionTwo() {
-    // Access the element by its ID
-    const image = document.getElementById('myImage');
 
-    // Change the src and alt attributes
-    image.src = 'new_image.jpg';
-    image.alt = 'New Image';
+// Modificando atributos HTML
+function mudaImagem() {
+    // Acessa o elemento a partir do seu ID
+    const imagem = document.getElementById('identificadorDaImagem');
+
+    // Muda o src da imagem
+    imagem.src = 'cachorro.png';
+    imagem.alt = 'Cachorro';
 }
 
-// Adding and Removing CSS Classes:
-function functionThree() {
-    // Access the element by its ID
-    const div = document.getElementById('myDiv');
 
-    // Add a CSS class
-    div.classList.add('highlight');
+// Adicionando e removendo classes CSS
+function mudaAsClassesCss() {
+    // Acessa o elemento a partir do seu ID
+    const div = document.getElementById('identificadorDaDiv');
 
-    // Remove a CSS class
-    div.classList.remove('box');
+    // Adiciona a classe CSS
+    div.classList.add('destaque');
+
+    // Remove a classe CSS
+    div.classList.remove('caixa');
 }
 
-// Handling Events:
-function functionFour() {
-    // Access the element by its ID
-    const button = document.getElementById('myButton');
+// Manipulando eventos
+function cliqueDoBotao() {
+    // Acessa o elemento a partir do seu ID
+    const botao = document.getElementById('meuBotao');
 
-    // Add an event listener
-    button.addEventListener('click', function() {
-    alert('Button clicked!');
+    // Adiciona um ouvinte ao evento de clique do botão
+    botao.addEventListener('click', function() {
+        alert('Botão clicado!');
     });
 }
 
-function functionFive() {
-    // Access the element by its ID
-    const container = document.getElementById('myContainer');
+// cliqueDoBotao();
 
-    // Create a new element
-    const newElement = document.createElement('p');
+// Adiciona um novo elemento HTML
+function adicionarNovoElemento() {
+    // Acessa o elemento a partir do seu ID
+    const container = document.getElementById('meuContainer');
 
-    // Set the text content
-    newElement.textContent = 'This is a new paragraph.';
+    // Cria novo elemento
+    const paragrafo = document.createElement('p');
 
-    // Append the new element to the container
-    container.appendChild(newElement);
+    // Adiciona texto ao elemento
+    paragrafo.textContent = 'Oi! Eu sou novo por aqui.';
+
+    // Adiciona o elemento ao container
+    container.appendChild(paragrafo);
+}
+
+function criarTabela(){
+    const listaDeAlunos = ["João", "Maria", "José", "Pedro"];
+
+    const container = document.getElementById('meuContainer');
+
+    const tabela = document.createElement('table');
+
+    listaDeAlunos.forEach(function(aluno) {
+        const tr = document.createElement('tr');
+        const td = document.createElement('td');
+        td.textContent = aluno;
+        tr.appendChild(td);
+        tabela.appendChild(tr);
+    });
+    container.appendChild(tabela);
 }
