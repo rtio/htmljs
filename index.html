@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<script src="index.js"></script>
+<script src="index.js" defer></script>
 <style>
     .caixa {
         width: 100px;
@@ -31,5 +31,23 @@
     
     <!-- Criando novos elementos -->
     <div id="meuContainer"></div>
+    
+    <!-- <script src="index.js"></script> -->
 </body>
 </html>
+
+<!-- 
+    Alternativas para carregar scripts:
+
+    defer: O atributo defer indica que o script será carregado em paralelo com o documento
+    HTML e executado após o carregamento do documento.
+
+    async: O atributo async indica que o script será carregado em paralelo com o documento
+    HTML e executado assim que o download for concluído, independentemente do
+    estado do documento. 
+
+    A escolha entre defer e async depende do comportamento desejado para o seu
+    código JavaScript. O defer é mais adequado quando o código depende do DOM,
+    enquanto o async é útil quando o código é independente do DOM e pode ser
+    executado assim que estiver disponível.
+ -->

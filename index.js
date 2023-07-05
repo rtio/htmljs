@@ -42,7 +42,8 @@ function cliqueDoBotao() {
     });
 }
 
-// cliqueDoBotao();
+// Executa a função ao carregar o arquivo
+cliqueDoBotao();
 
 // Adiciona um novo elemento HTML
 function adicionarNovoElemento() {
